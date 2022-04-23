@@ -1,0 +1,67 @@
+# user devcontainer convenience
+#`pip freeze` version when not locked
+#-------------------------------------------------
+
+# ~~~~~~~ vscode extensions support ~~~~~~~
+rich~=12.2.0
+
+# ~~~~~~~ project demo ~~~~~~~
+pyyaml==6.0
+pydantic~=1.8.2
+ruamel.yaml~=0.17.21  # unable to install from setup.py
+yamale==4.0.3
+
+# ~~~~~~~ awesome development ~~~~~~~
+beautifulsoup4==4.10.0
+Cython==0.29.26;sys_platform!='win32'
+devtools==0.8.0
+openpyxl
+pandas==1.4.1
+python-dotenv==0.19.2
+typing-extensions==4.0.1
+xlrd
+XlsxWriter==3.0.3
+
+# ~~~~~~~ notebooks & visualization ~~~~~~~
+ipykernel~=6.13.0
+jupyterlab~=3.3.4
+matplotlib~=3.5.1
+seaborn~=0.11.2
+
+# pydantic
+# ~~~~~~~ project docs/examples ~~~~~~~
+SQLAlchemy==1.4.33
+orjson
+ujson
+
+
+#-------------------------------------------------
+#was
+#File: requirements.txt
+#-------------------------------------------------
+## ~~~~~~~ required to process VS Command specifications ~~~~~~~
+#Cython==0.29.28
+#pandas==1.4.1
+#pyyaml==6.0
+#ruamel.yaml==0.17.21
+#yamale==4.0.3
+#strictyaml==1.6.1
+## ~~~~~~~ development and test (see tox.ini) ~~~~~~~
+#pytest
+#flake8
+#flake8-bugbear
+## ~~~~~~~ visualization ~~~~~~~
+#matplotlib==3.5.1
+#plotly==5.3.1
+#seaborn==0.11.2
+## ~~~~~~~ nice to have for Excel ~~~~~~~
+#openpyxl==3.0.9
+#XlsxWriter==3.0.2
+#xlrd==2.0.1
+## ~~~~~~~ notebook analysis ~~~~~~~
+#ipykernel==6.4.1
+#jupyterlab==3.2.0
+#ipywidgets==7.6.5
+#ipysheet==0.5.0
+#
+#-------------------------------------------------
