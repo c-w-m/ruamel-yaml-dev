@@ -13,11 +13,12 @@ and the chomping modifiers:
 
 """
 
-import pytest
 import platform
 
+import pytest
 # from ruamel.yaml.compat import ordereddict
-from roundtrip import round_trip, dedent, round_trip_load, round_trip_dump  # NOQA
+from roundtrip import (dedent, round_trip, round_trip_dump,  # NOQA
+                       round_trip_load)
 
 
 class TestLiteralScalarString:
@@ -189,11 +190,11 @@ class TestWalkTree:
         assert round_trip_dump(data) == dedent(exp)
 
     def test_map(self):
-        from ruamel.yaml.compat import ordereddict
         from ruamel.yaml.comments import CommentedMap
-        from ruamel.yaml.scalarstring import walk_tree, preserve_literal
+        from ruamel.yaml.compat import ordereddict
         from ruamel.yaml.scalarstring import DoubleQuotedScalarString as dq
         from ruamel.yaml.scalarstring import SingleQuotedScalarString as sq
+        from ruamel.yaml.scalarstring import preserve_literal, walk_tree
 
         data = CommentedMap()
         data[1] = 'a'

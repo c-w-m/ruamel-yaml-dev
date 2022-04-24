@@ -4,12 +4,13 @@
 various test cases for YAML files
 """
 
-import sys
 import io
-import pytest  # NOQA
 import platform
+import sys
 
-from roundtrip import round_trip, dedent, round_trip_load, round_trip_dump  # NOQA
+import pytest  # NOQA
+from roundtrip import (dedent, round_trip, round_trip_dump,  # NOQA
+                       round_trip_load)
 
 
 class TestYAML:
@@ -21,8 +22,8 @@ class TestYAML:
 
     def test_omap_out(self):
         # ordereddict mapped to !!omap
-        from ruamel.yaml.compat import ordereddict
         import ruamel.yaml  # NOQA
+        from ruamel.yaml.compat import ordereddict
 
         x = ordereddict([('a', 1), ('b', 2)])
         res = round_trip_dump(x, default_flow_style=False)
@@ -44,6 +45,7 @@ class TestYAML:
     @pytest.mark.skipif(sys.version_info < (2, 7), reason='collections not available')
     def test_dump_collections_ordereddict(self):
         from collections import OrderedDict
+
         import ruamel.yaml  # NOQA
 
         # OrderedDict mapped to !!omap
@@ -60,8 +62,8 @@ class TestYAML:
         reason='ruamel.yaml not available',
     )
     def test_dump_ruamel_ordereddict(self):
-        from ruamel.ordereddict import ordereddict
         import ruamel.yaml  # NOQA
+        from ruamel.ordereddict import ordereddict
 
         # OrderedDict mapped to !!omap
         x = ordereddict([('a', 1), ('b', 2)])

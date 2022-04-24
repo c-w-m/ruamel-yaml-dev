@@ -4,11 +4,12 @@
 testing of anchors and the aliases referring to them
 """
 
-import pytest
-from textwrap import dedent
 import platform
+from textwrap import dedent
 
-from roundtrip import round_trip, dedent, round_trip_load, round_trip_dump, YAML  # NOQA
+import pytest
+from roundtrip import (YAML, dedent, round_trip, round_trip_dump,  # NOQA
+                       round_trip_load)
 
 
 def load(s):
@@ -462,9 +463,9 @@ class TestMergeKeysValues:
 
 class TestDuplicateKeyThroughAnchor:
     def test_duplicate_key_00(self):
-        from ruamel.yaml import version_info
-        from ruamel.yaml import YAML
-        from ruamel.yaml.constructor import DuplicateKeyFutureWarning, DuplicateKeyError
+        from ruamel.yaml import YAML, version_info
+        from ruamel.yaml.constructor import (DuplicateKeyError,
+                                             DuplicateKeyFutureWarning)
 
         s = dedent("""\
         &anchor foo:

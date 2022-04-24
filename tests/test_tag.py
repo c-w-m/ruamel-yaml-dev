@@ -1,8 +1,7 @@
 # coding: utf-8
 
 import pytest  # NOQA
-
-from roundtrip import round_trip, round_trip_load, YAML
+from roundtrip import YAML, round_trip, round_trip_load
 
 
 def register_xxx(**kw):

@@ -1,17 +1,8 @@
 # coding: utf-8
 
 import pytest  # NOQA
-
-
-from roundtrip import (
-    round_trip,
-    na_round_trip,
-    round_trip_load,
-    round_trip_dump,
-    dedent,
-    save_and_run,
-    YAML,
-)  # NOQA
+from roundtrip import (YAML, dedent, na_round_trip, round_trip,  # NOQA
+                       round_trip_dump, round_trip_load, save_and_run)
 
 
 class TestIssues:
@@ -412,16 +403,18 @@ class TestIssues:
             yaml.load('{]')
 
     def test_issue_233(self):
-        from ruamel.yaml import YAML
         import json
+
+        from ruamel.yaml import YAML
 
         yaml = YAML()
         data = yaml.load('{}')
         json_str = json.dumps(data)  # NOQA
 
     def test_issue_233a(self):
-        from ruamel.yaml import YAML
         import json
+
+        from ruamel.yaml import YAML
 
         yaml = YAML()
         data = yaml.load('[]')
@@ -577,10 +570,11 @@ class TestIssues:
         assert buf.getvalue() == inp
 
     def test_issue_280(self):
-        from ruamel.yaml import YAML
-        from ruamel.yaml.representer import RepresenterError
         from collections import namedtuple
         from sys import stdout
+
+        from ruamel.yaml import YAML
+        from ruamel.yaml.representer import RepresenterError
         T = namedtuple('T', ('a', 'b'))
         t = T(1, 2)
         yaml = YAML()
@@ -650,8 +644,9 @@ class TestIssues:
 
     def test_issue_288(self):
         import sys
-        from ruamel.yaml.compat import StringIO
+
         from ruamel.yaml import YAML
+        from ruamel.yaml.compat import StringIO
 
         yamldoc = dedent("""\
         ---
@@ -681,8 +676,9 @@ class TestIssues:
 
     def test_issue_288a(self):
         import sys
-        from ruamel.yaml.compat import StringIO
+
         from ruamel.yaml import YAML
+        from ruamel.yaml.compat import StringIO
 
         yamldoc = dedent("""\
         ---
@@ -712,8 +708,9 @@ class TestIssues:
 
     def test_issue_290(self):
         import sys
-        from ruamel.yaml.compat import StringIO
+
         from ruamel.yaml import YAML
+        from ruamel.yaml.compat import StringIO
 
         yamldoc = dedent("""\
         ---
@@ -748,8 +745,9 @@ class TestIssues:
 
     def test_issue_290a(self):
         import sys
-        from ruamel.yaml.compat import StringIO
+
         from ruamel.yaml import YAML
+        from ruamel.yaml.compat import StringIO
 
         yamldoc = dedent("""\
         ---

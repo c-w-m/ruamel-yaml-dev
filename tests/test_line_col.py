@@ -1,8 +1,8 @@
 # coding: utf-8
 
 import pytest  # NOQA
-
-from roundtrip import round_trip, dedent, round_trip_load, round_trip_dump  # NOQA
+from roundtrip import (dedent, round_trip, round_trip_dump,  # NOQA
+                       round_trip_load)
 
 
 def load(s):

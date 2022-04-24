@@ -6,8 +6,9 @@ testing of anchors and the aliases referring to them
 
 import sys
 import textwrap
-import pytest
 from pathlib import Path
+
+import pytest
 
 
 class TestNewAPI:

@@ -1,7 +1,6 @@
 # coding: utf-8
 
 import pytest  # NOQA
-
 # import ruamel.yaml
 from roundtrip import round_trip
 

@@ -1,9 +1,10 @@
 # coding: utf-8
 
-import sys
 import platform
-import pytest
+import sys
 from textwrap import dedent
+
+import pytest
 
 NO_CLIB_VER = (3, 10)
 

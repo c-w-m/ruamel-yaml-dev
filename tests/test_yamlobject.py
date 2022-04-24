@@ -1,8 +1,8 @@
 # coding: utf-8
 
 import sys
-import pytest  # NOQA
 
+import pytest  # NOQA
 from roundtrip import save_and_run  # NOQA
 
 
@@ -70,8 +70,8 @@ def test_qualified_name00(tmpdir):
 @pytest.mark.skipif(sys.version_info < (3, 0), reason='no __qualname__')
 def test_qualified_name01(tmpdir):
     """issue 214"""
-    from ruamel.yaml import YAML
     import ruamel.yaml.comments
+    from ruamel.yaml import YAML
     from ruamel.yaml.compat import StringIO
 
     yaml = YAML(typ='unsafe', pure=True)

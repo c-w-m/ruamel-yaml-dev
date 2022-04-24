@@ -1,8 +1,8 @@
 # coding: utf-8
 
 import re
-import pytest  # NOQA
 
+import pytest  # NOQA
 from roundtrip import dedent, round_trip_dump  # NOQA
 
 
