@@ -46,9 +46,8 @@
 
 	// dev project package installation as `develop` (i.e., instant availability of changes)
 	//"postCreateCommand": "python setup.py develop",  # FAILS unable to write, raise to sudo
-	//"postCreateCommand": "sudo python setup.py develop",
+	//"postCreateCommand": "cd ./src/ruamel-yaml && sudo python setup.py develop",
 	//"postCreateCommand": "cd ./src/ruamel-yaml && sudo pip3 --trusted-host pypi.org --trusted-host files.pythonhosted.org --disable-pip-version-check --no-cache-dir install -e .",
-	//"postCreateCommand": "sudo python setup.py develop",
 
 	// Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
 	"remoteUser": "vscode",

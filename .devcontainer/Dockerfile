@@ -23,11 +23,6 @@ ENTRYPOINT ["/usr/bin/tini", "--"]
 CMD ["jupyter", "notebook", "--port=8888", "--no-browser", "--ip=0.0.0.0", "--allow-root"]
 
 # [Optional] If your pip requirements rarely change, uncomment this section to add them to the image.
-# COPY requirements.txt /tmp/pip-tmp/
-# RUN pip3 --disable-pip-version-check --no-cache-dir install -r /tmp/pip-tmp/requirements.txt \
-#    && rm -rf /tmp/pip-tmp
-
-# original files from the project
 
 # added for devcontainer convenience
 COPY requirements_dev.txt /tmp/pip-tmp/
